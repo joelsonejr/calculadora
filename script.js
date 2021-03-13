@@ -1,19 +1,40 @@
+let displayContent = "";
+
+
 //function to capture the clicked keys.
 function print(e){
     
-    let test = e.innerText;
+    let text = e.innerText;
     let out = document.getElementById("visor");
     
-    out.innerText=test;
+    out.innerText+=text;
 
-    console.log(test);
+    displayContent += text;
+    
 }
 
 
-// function to wipe the display
+//function to wipe the display
 function wipe(){
     let erase = document.getElementById("visor");
 
     erase.innerText = "";
-    console.log("asd");
+    
+}
+
+// function that sorts operands and operators
+TODO: checar notas antes de prosseguir.
+function sortInput(i){
+    if (i == "+" || i == "-" || i =="x" || i == "/"){
+        console.log("eu falei");
+    }
+    else{
+        console.log(parseInt(i));
+    }
+
+}
+
+//function that does the actual math
+function doCalc(){
+    sortInput(displayContent);
 }
